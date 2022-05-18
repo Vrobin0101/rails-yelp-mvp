@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <p style="color: green"><%= notice %></p>
+      <h1 class="ps-3">Restaurants</h1>
+      <div id="restaurants">
+      <%= link_to "New restaurant", new_restaurant_path, class: "btn btn-primary ms-3" %>
+        <% @restaurants.each do |restaurant| %>
+          <div class="restaurant m-3 p-3">
+            <%= render restaurant %>
+            <p>
+              <%= link_to "Show this restaurant", restaurant, class: "btn btn-secondary mt-3" %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

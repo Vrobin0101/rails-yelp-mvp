@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <%= render @restaurant %>
+
+  <div class="my-3">
+    <section>
+      <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant), class: "btn btn-warning" %>
+      <%= link_to "Back to restaurants", restaurants_path, class: "btn btn-primary"%>
+    </section>
+
+    <%= link_to "Destroy this restaurant", @restaurant, method: :delete,class: "btn btn-danger my-3"%>
+  </div>
+</div>
